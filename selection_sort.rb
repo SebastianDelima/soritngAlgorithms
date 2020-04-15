@@ -2,30 +2,31 @@
 unsorted_arr = [3, 4, 7, 5, 10, 25]
 
 def selection_sort(arr)
-    counter = 0
-    replace = 0
-    result  = 0
-    arr.length.times do
-        iteration = 0
-    arr.slice(counter, arr.length).each { |num|
-         if num < arr[counter]
-            result = iteration
-         end
-         iteration += 1
-    }
+  counter = 0
+  iteration = 0 
+    for i in arr do 
+
+      arr.each do |n|
+        print counter
+        print "-----"
+        # print arr[counter]
+        if arr[counter] > n
+          print "≈≈≈≈"
+          puts arr[counter] > n
+          puts arr[counter]
+          puts arr[iteration]
+          print arr 
+          arr[iteration] = arr[counter]
+          arr[counter] = n
+        end
+        iteration += 1
+
+      end
       print counter
-      print "-----"
-      print  arr[counter] 
-      print "-----"
-      print arr[result]
-      print "------"
-      print result
-    temp_num = arr[counter]
-    arr[counter] =  arr.slice(counter, arr.length)[result]
-    arr[result] = temp_num
-    print arr
-    counter += 1
-    end
+      counter += 1
+
+    end 
+   
     print arr
 end
 
